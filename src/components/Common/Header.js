@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { AiOutlineDollarCircle, AiOutlineQuestionCircle } from "react-icons/ai";
+import { RiMenu5Line } from "react-icons/ri";
+
 import LOGO_PNG from "./../../assets/images/logo.png";
 
 export default function Header() {
@@ -49,6 +51,11 @@ export default function Header() {
           <button className="btn btn-primary">Get Started</button>
         </li>
       </ul>
+      <div className="nav_btn">
+        <button className="btn btn-primary">
+          <RiMenu5Line />
+        </button>
+      </div>
     </div>
   );
 }

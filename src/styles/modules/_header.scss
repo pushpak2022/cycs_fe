@@ -65,4 +65,30 @@
       }
     }
   }
+
+  .nav_btn {
+    display: none;
+  }
+
+  @include Mobile_Portrait {
+    padding-left: 20.45px;
+    padding-right: 20.45px;
+
+    .navs {
+      display: none;
+    }
+
+    .nav_btn {
+      display: grid;
+      align-items: center;
+
+      .btn {
+        padding: 8px 12px;
+      }
+
+      svg {
+        font-size: 16.67px;
+      }
+    }
+  }
 }
