@@ -90,4 +90,33 @@
       }
     }
   }
+
+  @include Mobile_Custom_Portrait {
+    padding: 0 20px;
+
+    .footer__container {
+      .company__links {
+        grid-template-columns: 100%;
+        padding-top: 40px;
+
+        .company_block {
+          .logo_img {
+            height: 38.5px;
+            width: 38.5px;
+            margin-right: 8.75px;
+            margin-left: 0;
+          }
+        }
+
+        .links_block {
+          grid-template-columns: 100%;
+          padding-top: 40px;
+
+          .link__title {
+            margin-right: 35%;
+          }
+        }
+      }
+    }
+  }
 }

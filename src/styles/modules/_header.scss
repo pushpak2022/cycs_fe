@@ -70,7 +70,7 @@
     display: none;
   }
 
-  @include Mobile_Portrait {
+  @include Mobile_Custom_Portrait {
     padding-left: 20.45px;
     padding-right: 20.45px;
 
