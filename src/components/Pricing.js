@@ -5,7 +5,8 @@ import PRICING_IMAGE from "./../assets/images/pricing_image.png";
 import GRAY_LOGO from "./../assets/images/gray_logo.png";
 
 export default function Pricing() {
-  //
+  const [pricing, setPricing] = React.useState("free");
+
   return (
     <div className="Pricing--Root">
       <div className="header__call">
@@ -116,9 +117,16 @@ export default function Pricing() {
             </div>
           </div>
           <div className="section__right">
-            <div style={{ marginTop: 0 }} className="plan__block selected">
+            <div
+              style={{ marginTop: 0 }}
+              onClick={() => setPricing("free")}
+              className={`plan__block ${pricing === "free" ? "selected" : ""}`}>
               <div>
-                <BsFillCheckCircleFill className="circle__check" />
+                {pricing === "free" ? (
+                  <BsFillCheckCircleFill className="circle__check" />
+                ) : (
+                  <BsCircle className="circle" />
+                )}
                 <span className="title">Free Plan</span>
               </div>
               <div>
@@ -127,19 +135,36 @@ export default function Pricing() {
               </div>
               <div></div>
             </div>
-            <div className="plan__block">
+            <div
+              onClick={() => setPricing("basic")}
+              className={`plan__block ${
+                pricing === "basic" ? "selected" : ""
+              }`}>
               <div>
-                <BsCircle className="circle" />
-                <span className="title">Basic Plan</span>
+                {pricing === "basic" ? (
+                  <BsFillCheckCircleFill className="circle__check" />
+                ) : (
+                  <BsCircle className="circle" />
+                )}
+                <div className="basic">
+                  <span className="title">Basic Plan</span>
+                  <span className="badge">Recommended</span>
+                </div>
               </div>
               <div>
                 <p className="price">$20</p>
                 <p className="price__per">/month</p>
               </div>
             </div>
-            <div className="plan__block">
+            <div
+              onClick={() => setPricing("pro")}
+              className={`plan__block ${pricing === "pro" ? "selected" : ""}`}>
               <div>
-                <BsCircle className="circle" />
+                {pricing === "pro" ? (
+                  <BsFillCheckCircleFill className="circle__check" />
+                ) : (
+                  <BsCircle className="circle" />
+                )}
                 <span className="title">Pro Plan</span>
               </div>
               <div>
