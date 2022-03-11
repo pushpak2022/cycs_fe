@@ -9,4 +9,8 @@
     min-width: 100vw;
     flex: 1;
   }
+
+  @include Mobile_Custom_Portrait {
+    width: 100vw;
+  }
 }
